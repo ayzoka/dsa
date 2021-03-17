@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{amsthm,amssymb,amsmath,graphicx}
+\setlength{\parindent}{0pt}
+\usepackage[localise=on]{xepersian}
+\usepackage{xepersian}
+\settextfont{IRMitra}
+
+\newcounter{mynumber}
+\setcounter{mynumber}{1}
+\newcommand{\mynum}{\arabic{mynumber}\stepcounter{mynumber}}
+\newenvironment{question}[0]{\textbf{تمرین \mynum.}}{}
+
+\title{تمرین اول }
+\author{
+	ساختمان داده ها و الگوریتم
+}
+\begin{document}
+	\maketitle
+	\setRTL 
+
+	\begin{question}
+		اگر 
+		$f_k$
+		نشان دهنده
+		$k$
+		امین عدد در دنباله فیبوناچی باشد،
+		بهترین زمان برای محاسبه
+		$f_{n^2}$
+		چیست؟
+		
+	\end{question}
+
+۱) $O(n)$
+
+۲) $O(n^2)$
+
+۳)$O(\log n)$
+
+۴)$O(n\log n)$
+\\
+
+	\begin{question}
+		اگر 
+		$T(n)=\sum_{i=1}^n i+\frac{1}{i}$
+		باشد، حاصل نهایی 
+		$T(n)$
+		کدام است؟
+	\end{question}
+
+
+	۱) $\Theta (n^2)$
+
+	۲) $\Theta (n^2+i^2)$
+	
+	۳)$\Theta (n^2\ln n)$
+	
+	۴)$\Theta (n\ln n)$
+	\\
+\end{document}
