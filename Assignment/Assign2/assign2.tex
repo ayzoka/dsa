@@ -1,0 +1,111 @@
+\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{amsthm,amssymb,amsmath,graphicx}
+\usepackage[top=2cm, bottom=2cm]{geometry}
+\setlength{\parindent}{0pt}
+\usepackage[localise=on]{xepersian}
+\usepackage{xepersian}
+\settextfont{IRMitra}
+
+\newcounter{mynumber}
+\setcounter{mynumber}{1}
+\newcommand{\mynum}{\arabic{mynumber}\stepcounter{mynumber}}
+\newenvironment{ques}[0]{\textbf{تمرین \mynum.}}{}
+
+\title{تمرین دوم }
+\author{
+	ساختمان داده ها و الگوریتم
+}
+\begin{document}
+	\maketitle
+	\setRTL 
+
+	\begin{ques}
+		\\
+		\textbf{الف)}
+		آرایه دو بعدی 
+		$A_{n\times n}$
+		از اعداد داده شده است، که اعداد هر سطر و هر ستون آن مرتب شده است.
+		به ازای عدد داده شده 
+		$x$،
+		جستجو این عدد، در این آرایه در چه زمانی امکان پذیر است؟
+		\\
+		۱)$O(n)$
+		\quad
+		۲)$O(\log n)$
+		\quad
+		۳)$O(\log^2n)$
+		\quad
+		۴)$O(n\log n)$
+		\quad
+		۵)$O(n^2)$
+		\quad
+		\\
+		\textbf{ب)}
+		اگر در این آرایه تنها اعداد هر سطر مرتب شده باشد،‌آنگاه چطور؟
+		\\
+		۱)$O(n)$
+		\quad
+		۲)$O(\log n)$
+		\quad
+		۳)$O(\log^2n)$
+		\quad
+		۴)$O(n\log n)$
+		\quad
+		۵)$O(n^2)$
+		\quad
+		\\
+		\textbf{ج)}
+		اگر هیچ کدام از سطر ها و ستون ها مرتب شده نباشند، آنگاه چطور؟
+		\\
+		۱)$O(n)$
+		\quad
+		۲)$O(\log n)$
+		\quad
+		۳)$O(\log^2n)$
+		\quad
+		۴)$O(n\log n)$
+		\quad
+		۵)$O(n^2)$
+		\quad
+		\\
+	\end{ques}
+	\newline
+	\begin{ques}
+		\\
+		دنباله‌ای از 
+		$k$
+		پشته از اعداد مفروض است، بطوری که 
+		در پشته $i$ام $t_i$ عدد موجود است؛
+بطوری که تمامی پشته ها به ترتیب نزولی مرتب شده باشند و
+		$\sum_{i=1}^k t_i =n$؛
+		می‌خواهیم تمام این $n$ عضو را به یک پشته دیگر انتقال دهیم، بطوری که 
+		عناصر در آن پشته به طور مرتب باقی بمانند.
+		\\
+		\textbf{الف)}
+		الگوریتمی ارائه کنید که این کار را از مرتبه $O(nk)$ انجام دهد.
+		\\
+		\textbf{ب)}
+		الگوریتمی ارائه کنید که این کار را از مرتبه $O(n)$ انجام دهد.
+		\\
+		\textbf{ج)}
+		ثابت کنید که کرانی بهتر این وجود ندارد.
+		\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\\
+		یک صف حلقوی پر و تشکیل شده از $n$
+		عدد، مفروض است:
+		\\
+		\textbf{الف)}
+		الگوریتم ارائه کنید که ترتیب محتویات موجود در این صف را معکوس کند.
+		\\
+		\textbf{ب)}
+		فرض کنید که صف ما خراب است و اشاره‌گر به شروع و پایان محتویات داخل صف ندارد،
+		الگوریتمی ارائه کنید که ترتیب محتویات داخل این صف را معکوس کند.
+		\\
+		\textbf{ج)}
+		الگوریتم های خود را تحلیل کنید.
+	\end{ques}
+\end{document}
