@@ -1,0 +1,141 @@
+\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{amsthm,amssymb,amsmath,graphicx}
+\usepackage{color}
+\usepackage{url}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\setlength{\parindent}{0pt}
+\usepackage[localise=on]{xepersian}
+\usepackage{xepersian}
+\settextfont{IRMitra}
+
+\makeatletter
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
+\makeatother
+
+\newcounter{mynumber}
+\setcounter{mynumber}{1}
+\newcommand{\mynum}{\arabic{mynumber}\stepcounter{mynumber}}
+\newenvironment{ques}[0]{\textbf{سوال \mynum.}}{}
+\newtheorem{قضیه}{قضیه}
+
+\title{حل تمرین آرایه و پشته}
+\author{
+	ساختمان داده ها و الگوریتم
+}
+\date{بهار ۱۴۰۰}
+
+\begin{document}
+	\maketitle
+	\setRTL 
+
+	\begin{ques}
+		\textbf{(ارشد ۹۷)}
+		در یک آرایه عددی $A$
+		به طول 
+		$m$ 
+		برخی از عناصر ۱ تا 
+		$n$ 
+		که $m<n$ 
+		است، ظاهر شده‌اند. بهترین الگوریتم برای
+		یافتن بزرگ‌ترین عنصری که در آرایه ظاهر نشده است؛ دارای چه مرتبه زمانی است؟
+		\\۱)
+		$O(n)$
+		\\۲)
+		$O(m)$
+		\\۳)
+		$O(n\log n)$
+		\\۴)
+		$O(m\log m)$
+		\\
+	\end{ques}
+	\quad\\
+	\begin{ques}
+		\textbf{(ارشد ۹۶)}
+		می‌خواهيم در یک آرايه 
+		$n$تایی
+		تایی نامرتب، عنصری که حداقل 
+		$\lfloor\frac{n}{2}\rfloor+1$
+		بار تکرار شده است را بيابيم؛ کدام گزینه
+صحیح است؟
+\\۱) الگوریتمی با هزینه حداکثر $O(n)$ وجود دارد
+\\۲) الگوریتمی با هزینه حداکثر $O(\sqrt{n})$ وجود دارد
+\\۳) بهترین الگوریتم با زمان اجرای میانگین $O(n)$ و مبتنی بر درهم‌سازی است.
+\\۴) بهترین الگوریتم با زمان اجرای میانگین $O(n\log n)$ و مبتنی بر مرتب‌سازی است.
+\\
+	\end{ques}
+	\quad\\
+	\begin{ques}
+		\textbf{(ارشد ۹۵)}
+		میخواهیم برای عدد صحیح و مثبت $n$
+		بزرگ‌ترین عدد صحیح و مثبت $x$
+		را پیدا کنیم که $x^2\leq n$
+		باشد. بهترین الگوریتم برای یافتن چنین عددی از چه مرتبه زمانی است؟
+		\\۱)
+		$O(n)$
+		\\۲)
+		$O(\sqrt{n})$
+		\\۳)
+		$O(\log n)$
+		\\۴)
+		$O(n\log n)$
+	\end{ques}
+	\newpage
+	\begin{ques}
+		\textbf{(ارشد ۹۵)}
+		اگر الگوریتم جستجوی دودویی را برای جستجوی عناصر آرایه
+		زیر
+		به کار ببریم, میانگین تعداد مقایسه‌ها برای جستجوی موفق و ناموفق، به طور تقریبی چقدر است؟
+		$$A[1..9]=[-1,2,10,20,25,29,35,45,50]$$
+		۱) موفق ۲,۸ ناموفق ۳,۸
+		\\۲) موفق ۲,۸ ناموفق ۲,۸ 
+		\\۳) موفق ۲,۸ ناموفق ۳,۴ 
+		\\۴) موفق ۳,۴ ناموفق ۳,۴
+	\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۸۵)}
+		در عبارت محاسباتی زیر، عملگر 
+		$+$
+		به عملگر 
+		$\times$
+		الوییت دارد، این عبارت معادل کدام عبارت پیشوندی زیر است؟
+		$$((2+3)\times 4+5\times(6+7)\times 8 )+9$$
+		۱) $+\times++234\times\times 5 + 6789$
+		\\۲) $+\times\times\times+23+45+6789$
+		\\۳) $++\times+234\times\times 5+6789$
+		\\۴) $\times\times\times++23+45+6789$
+	\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۹۸)}
+		اعداد ۱ تا ۶ به ترتیب صعودی در ورودی یک پشته داده شده است.
+		کدام یک از موارد زیر را نمی‌توان با هیچ ترتیبی از درج و حذف
+		در خروجی داشته باشیم؟(اعداد را از چپ به راست بخوانید)
+		\\۱) ۱۲۳۵۶۴
+		\\۲) ۲۱۵۳۴۶
+		\\۳) ۳۲۴۶۵۱
+		\\۴) ۴۳۲۱۶۵
+		\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۹۸)}
+		فرض کنید k پشته $S_1,\cdots,S_k$ را در اختیار داریم, تنها اعمال مجاز گرفتن یک ورودی و درج
+ کردن آن داخل پشته $S_k$ و قرار دادن در خروجی، حذف کردن یک عنصر از پشته $S_i$ (برای 
+$i<k$) و درج کردن آن داخل پشته $S_{i+1}$ است. فرض کنید اعداد $1,\cdots,n$ به ترتیب 
+کوچک به بزرگ به ‌عنوان ورودی داده می‌شود؛ کوچکترین $k$ که می‌توان همه‌ی جایگشت‌های 
+$1,\cdots,n$  را با اعمال مجاز گفته‌شده تولید کرد، در بین گزینه‌ها کدام است؟
+	\\۱) $1$
+	\\۲) $2$
+	\\۳) $n$
+	\\۴) $n-1$
+	\end{ques}
+\end{document}
