@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\renewcommand{\baselinestretch}{1.4}
+\usepackage{amsthm,amssymb,amsmath,graphicx}
+\usepackage{color}
+\usepackage{url}
+\usepackage[top=2cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
+\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+\usepackage{babel}
+\usepackage{blindtext}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\setlength{\parindent}{0pt}
+\usepackage[localise=on]{xepersian}
+\usepackage{xepersian}
+\settextfont{IRMitra}
+
+\makeatletter
+\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
+\makeatother
+
+\newcounter{mynumber}
+\setcounter{mynumber}{1}
+\newcommand{\mynum}{\arabic{mynumber}\stepcounter{mynumber}}
+\newenvironment{ques}[0]{\textbf{سوال \mynum.}}{}
+\newtheorem{قضیه}{قضیه}
+
+\title{حل تمرین صف و لیست پیوندی}
+\author{
+	ساختمان داده ها و الگوریتم
+}
+\date{بهار ۱۴۰۰}
+
+\begin{document}
+	\maketitle
+	\setRTL 
+	\begin{ques}
+		\textbf{(ارشد ۹۴)}
+		فرض کنید صف $Q$ با یک آرایه‌ی حلقوی به اندازه‌ی $m$ پیاده‌سازی شده است که اندیس‌های آن از صفر تا $m-1$ است و عناصر آن به صورت چرخه‌ای و در جهت ساعتگرد ذخیره شده‌اند. مولفه‌های $front(Q)$ و $rear(Q)$ به ترتیب اندیس اولین عنصر و عنصر بعد از آخرین عنصر صفر را ذخیره می‌کنند. تعداد عناصر داخل صف و شرط پر بودن صف کدام گزینه زیر است؟ 
+\\۱) $rear(Q)-front(Q)+1 \mod m$ \quad و \quad $front(Q)=rear(Q)$
+\\۲) $rear(Q)-front(Q) \mod m$ \quad و \quad $front(Q)=rear(Q)$
+\\۳) $rear(Q)-front(Q)+1 \mod m$ \quad و \quad $front(Q)=rear(Q)+1 \mod m$
+\\۴) $rear(Q)-front(Q) \mod m$ \quad و \quad $front(Q)=rear(Q)+1 \mod m$
+\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۹۳)}
+		برای ساخت یک صف $Q$ از دو پشته $S_1$ و $S_2$ استفاده می‌کنیم. برای درج $x$ در انتهای $Q$ ، عمل $Push(S_1,x)$ را انجام می‌دهیم. برای حذف یک عنصر از ابتدای $Q$ ، اگر $S_2$ خالی نباشد، عمل $Pop(S_2)$ را انجام می‌دهیم. در غیر این صورت، همه‌ی عناصر $S_1$ را به ترتیب $Pop$ کرده و $Push(S_2)$ می‌کنيم. اکنون عمل $Pop$ بر روی $S_2$ عنصر ابتدایی $Q$ را بر می‌گرداند.
+\\
+اگر بر روی $Q$ که در ابتدا خالی است، ۱۰۰ عمل صورت گیرد (درج در انتها، حذف از ابتدا یا هر ترتیب دل‌خواهی از آن‌ها) حداکثر هزینه چه مقدار خواهد بود؟ فرض کنید هر $Push$ و هر $Pop$ بر روی هر یک از این دو پشته ۱ واحد هزینه دارد.
+\\۱) $150$
+\\۲) $151$
+\\۳) $199$
+\\۴) $200$
+\\
+	\end{ques}
+\\
+	\begin{ques}
+		\textbf{(دکتری ۹۵)}
+		داده ساختار صف با سه عملیات افزودن به ابتدای صف، حذف از انتهای صف و استخراج عنصر کمینه را در نظر بگیرید. بهترین پیاده‌سازی
+ممکن برای این داده ساختار هر یک از سه عملیات فوق را به‌صورت «سرشکن» در چه زمانی پشتیبانی می‌کند؟ بهترین گزینه را انتخاب کنید.
+\\۱) هر سه عملیات $O(1)$
+\\۲) هر سه عملیات $O(\log n)$
+\\۳) درج و حذف $O(1)$ و استخراج کمینه $O(\log n)$
+\\۴) درج و حذف $O(\log n)$ و استخراج کمینه $O(n)$
+\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۹۴)}
+		یک لیست پیوندی خطی با دو اشاره‌گر به ابتدا و انتهای آن در نظر بگیرید. کدام یک از اعمال زیر وابسته به طول لیست می‌باشد؟
+\\۱) حذف عنصر از ابتدا لیست
+\\۲) اضافه‌کردن عنصر به ابتدا لیست
+\\۳) اضافه‌کردن عنصر به انتهای لیست
+\\۴) حذف عنصر از انتهای لیست
+\\
+	\end{ques}
+	\\
+	\begin{ques}
+		\textbf{(ارشد ۹۳)}
+		روی لیست پیوندی و دوسویه‌ی $Q$ که عناصر آن عدد هستند و اشاره‌گر به عنصر اول و آخر آن را داریم، اعمال زیر تعریف شده‌اند:
+\\$Delete(k)$ :  $k$ عنصر ابتدای $Q$ را به ترتیب حذف می‌کند.
+\\$Append(c)$ : عنصر آخر $Q$ را نگاه می‌کند، اگر مقدارش از $C$ بیشتر بود آن را حذف می‌کند. این کار را تکرار می‌کند تا عنصر انتهایی کمتر یا مساوی $C$ شود (يا $Q$ تهی شود). در آن صورت عنصر $C$ را به انتههای صف درج می‌کند.
+\\اگر دنباله‌ای از n تا از این دو عمل را با ترتیب دلخواه روی یک لیست تهی $Q$ انجام دهیم. مجموع کل هزینه‌ها به کدام گزینه زیر نزدیک‌تر است؟
+\\۱) $n-k$
+\\۲) $n$
+\\۳) $2n$
+\\۴) $3n$
+	\end{ques}
+
+\end{document}
